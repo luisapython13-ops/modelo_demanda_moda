@@ -1,1 +1,11 @@
 .env
+__pycache__/
+*.py[cod]
+*.pkl
+.ipynb_checkpoints/
+outputs/*.pkl
+outputs/*.parquet
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
