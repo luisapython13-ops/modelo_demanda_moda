@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  modelo_moda:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: modelo_demanda_moda
+    ports:
+      - "8888:8888"
+    env_file:
+      - .env
+    volumes:
+      - ./datos_excel:/app/datos_excel
+      - ./outputs:/app/outputs
+      - ./notebooks:/app/notebooks
+    restart: unless-stopped
